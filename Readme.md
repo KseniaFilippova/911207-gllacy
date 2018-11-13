@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Ксения Филиппова](https://up.htmlacademy.ru/htmlcss/23/user/911207).
-* Наставник: [Ксения Торкова](https://htmlacademy.ru/profile/id23249). 
+* Наставник: [Ксения Торкова](https://up.htmlacademy.ru/htmlcss/23/user/23249). 
 
 ---
 
