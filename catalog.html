@@ -11,7 +11,15 @@
           <img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина «Глэйси»">
         </a>
         <ul class="site-navigation">
-          <li class="site-navigation-current"><a href="catalog.html">Каталог</a></li>
+          <li class="site-navigation-current"><a href="catalog.html">Каталог</a>
+            <ul class="catalog-navigation">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="#">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лед</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href="purchase.html">Доставка и оплата</a></li>
           <li><a href="information.html">О компании</a></li>
         </ul>
@@ -30,6 +38,75 @@
         <li><a href="catalog.html">Католог</a></li>
         <li class="breadcrumbs-current">Сливочное</li>
       </ul>
+       <section class="modal modal-search">
+        <h2 class="visually-hidden"><label for="searchfield">Поиск по сайту</label></h2>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <input id="searchfield" type="search" name="search" placeholder="Что ищем?">
+          <button class="visually-hidden" type="submit">Найти</button>
+          <button class="visually-hidden" type="button">Закрыть</button>
+        </form>
+      </section>
+      <section class="modal modal-login">
+        <h2 class="visually-hidden">Личный кабинет</h2>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="login-form-login">
+            <label class="visually-hidden" for="user-login">Логин</label>
+            <input id="user-login" type="text" name="user-login" placeholder="Логин">
+          </p>
+          <p class="login-form-password">
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input id="user-password" type="password" name="password" placeholder="Пароль">
+          </p>
+          <p class="login-form-restore">
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+          </p>
+          <button class="button login-form-button" type="submit">Войти</button>
+          <button class="visually-hidden" type="button">Закрыть</button>
+        </form>
+      </section>
+      <section class="modal modal-cart">
+        <h2 class="visually-hidden">Товары в корзине</h2>
+        <form class="cart-form" action="https://echo.htmlacademy.ru" method="post">
+          <table class="cart-form-list">
+            <tr class="cart-form-item">
+              <td>
+                <button class="cart-delete-button" type="button">Удалить товар</button>
+              </td>
+              <td>
+                <textarea name="item1" rows="2" cols="30" readonly>Пломбир с апельсиновым джемом</textarea>
+              </td>
+              <td>
+                <input type="text" name="item-count1" value="1,5 кг х 200 руб." readonly>
+              </td>
+              <td>
+                <input type="text" name="item-total1" value="300 руб." readonly>
+              </td>
+            </tr>
+            <tr class="cart-form-item">
+              <td>
+                <button class="cart-delete-button" type="button">Удалить товар</button>
+              </td>
+              <td>
+                <textarea name="item2" rows="2" cols="30" readonly>Клубничный пломбир с присыпкой из белого шоколада</textarea>
+              </td>
+              <td>
+                <input type="text" name="item-count2" value="1,5 кг х 300 руб." readonly>
+              </td>
+              <td>
+                <input type="text" name="item-total2" value="450 руб." readonly>
+              </td>
+            </tr>
+          </table>
+            <p class="cart-form-total">
+              <label>Итого:
+                <input type="text" name="total-price" value="750 руб." readonly>
+              </label>
+            </p>
+          <a class="button cart-form-button" href="#">Оформить заказ</a>
+          <button class="visually-hidden" type="button">Закрыть</button>
+        </form>
+      </section>
     </header>
     <main class="container">
       <h1 class="page-title">Сливочное мороженое</h1>
@@ -74,7 +151,7 @@
             <label for="jam">джемы</label>
           </div>
           <div class="catalog-form-button">
-            <button type="submit">Применить</button>>
+            <button type="submit">Применить</button>
           </div>
         </form>
       </section>

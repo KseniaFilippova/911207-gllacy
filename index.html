@@ -11,7 +11,15 @@
           <img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина «Глэйси»">
         </a>
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a>
+            <ul class="catalog-navigation">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="#">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лед</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href="purchase.html">Доставка и оплата</a></li>
           <li><a href="information.html">О компании</a></li>
         </ul>
@@ -25,6 +33,75 @@
         С 10 до 20, ежедневно
         <a href="tel:88124502525">8 812 450-25-25</a>
       </p>
+      <section class="modal modal-search">
+        <h2 class="visually-hidden"><label for="searchfield">Поиск по сайту</label></h2>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <input id="searchfield" type="search" name="search" placeholder="Что ищем?">
+          <button class="visually-hidden" type="submit">Найти</button>
+          <button class="visually-hidden" type="button">Закрыть</button>
+        </form>
+      </section>
+      <section class="modal modal-login">
+        <h2 class="visually-hidden">Личный кабинет</h2>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="login-form-login">
+            <label class="visually-hidden" for="user-login">Логин</label>
+            <input id="user-login" type="text" name="user-login" placeholder="Логин">
+          </p>
+          <p class="login-form-password">
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input id="user-password" type="password" name="password" placeholder="Пароль">
+          </p>
+          <p class="login-form-restore">
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+          </p>
+          <button class="button login-form-button" type="submit">Войти</button>
+          <button class="visually-hidden" type="button">Закрыть</button>
+        </form>
+      </section>
+      <section class="modal modal-cart">
+        <h2 class="visually-hidden">Товары в корзине</h2>
+        <form class="cart-form" action="https://echo.htmlacademy.ru" method="post">
+          <table class="cart-form-list">
+            <tr class="cart-form-item">
+              <td>
+                <button class="cart-delete-button" type="button">Удалить товар</button>
+              </td>
+              <td>
+                <textarea name="item1" rows="2" cols="30" readonly>Пломбир с апельсиновым джемом</textarea>
+              </td>
+              <td>
+                <input type="text" name="item-count1" value="1,5 кг х 200 руб." readonly>
+              </td>
+              <td>
+                <input type="text" name="item-total1" value="300 руб." readonly>
+              </td>
+            </tr>
+            <tr class="cart-form-item">
+              <td>
+                <button class="cart-delete-button" type="button">Удалить товар</button>
+              </td>
+              <td>
+                <textarea name="item2" rows="2" cols="30" readonly>Клубничный пломбир с присыпкой из белого шоколада</textarea>
+              </td>
+              <td>
+                <input type="text" name="item-count2" value="1,5 кг х 300 руб." readonly>
+              </td>
+              <td>
+                <input type="text" name="item-total2" value="450 руб." readonly>
+              </td>
+            </tr>
+          </table>
+            <p class="cart-form-total">
+              <label>Итого:
+                <input type="text" name="total-price" value="750 руб." readonly>
+              </label>
+            </p>
+          <a class="button cart-form-button" href="#">Оформить заказ</a>
+          <button class="visually-hidden" type="button">Закрыть</button>
+        </form>
+      </section>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Магазин мороженого «Глэйси»</h1>
@@ -144,7 +221,8 @@
           Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
         </p>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <input type="email" name="email" placeholder="Электронная почта">
+          <label class="visually-hidden" for="subscribe-user-email">Ведите адрес почты, если хотите подписаться на рассылку</label>
+          <input type="email" name="subscribe-user-email" id="subscribe-user-email" placeholder="Электронная почта">
           <button type="submit">Отправить</button>
         </form>
       </section>
@@ -159,6 +237,25 @@
           <p>(с 10 до 20 ежедневно)</p>
           <a class="button button-communication" href="#">Форма обратной связи</a>
         </div>
+      </section>
+      <section class="modal modal-feedback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <b>Мы обязательно вам ответим!</b>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="feedback-form-name">
+            <label class="visually-hidden" for="user-name">Ваше имя</label>
+            <input type="text" name="user-name" id="user-name" placeholder="Как вас зовут?">
+          </p>
+          <p class="feedback-form-email">
+            <label class="visually-hidden" for="user-email">Ваш адрес электронной почты</label>
+            <input type="email" name="feedback-user-email" id="user-email" placeholder="Ваша почта для ответа?">
+          </p>
+          <p class="feedback-form-feedback">
+            <label class="visually-hidden" for="user-feedback">Ваш вопрос или отзыв</label>
+            <textarea name="user-feedback" id="user-feedback" placeholder="Напишите что-нибудь..." cols="30" rows="5"></textarea>
+          </p>
+          <button class="button feedback-form-button" type="submit">Отправить</button>
+        </form>
       </section>
     </main>
     <footer class="main-footer">
@@ -180,7 +277,7 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="Логотип сайта HTML Academy">
         </a>
-        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2017</p>
       </div>
     </footer>
   </body>
