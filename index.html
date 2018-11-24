@@ -12,9 +12,9 @@
         </a>
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a>
-            <ul class="catalog-navigation">
+            <ul class="catalog-navigation dropdown">
               <li><a href="#">Новинки</a></li>
-              <li><a href="#">Сливочное</a></li>
+              <li><a href="catalog-creamy.html">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лед</a></li>
               <li><a href="#">Мелорин</a></li>
@@ -33,7 +33,7 @@
         С 10 до 20, ежедневно
         <a href="tel:88124502525">8 812 450-25-25</a>
       </p>
-      <section class="modal modal-search">
+      <section class="dropdown dropdown-search">
         <h2 class="visually-hidden"><label for="searchfield">Поиск по сайту</label></h2>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <input id="searchfield" type="search" name="search" placeholder="Что ищем?">
@@ -41,7 +41,7 @@
           <button class="visually-hidden" type="button">Закрыть</button>
         </form>
       </section>
-      <section class="modal modal-login">
+      <section class="dropdown dropdown-login">
         <h2 class="visually-hidden">Личный кабинет</h2>
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
           <p class="login-form-login">
@@ -60,7 +60,7 @@
           <button class="visually-hidden" type="button">Закрыть</button>
         </form>
       </section>
-      <section class="modal modal-cart">
+      <section class="dropdown dropdown-cart">
         <h2 class="visually-hidden">Товары в корзине</h2>
         <form class="cart-form" action="https://echo.htmlacademy.ru" method="post">
           <table class="cart-form-list">
@@ -157,6 +157,7 @@
               <span class="item-price">310 ₽</span>
               <span class="item-measure">/кг</span>
             </p>
+            <a class="button catalog-button dropdown" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hit-catalog-item">
             <a href="#">
@@ -167,6 +168,7 @@
               <span class="item-price">380 ₽</span>
               <span class="item-measure">/кг</span>
             </p>
+            <a class="button catalog-button dropdown" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hit-catalog-item">
             <a href="#">
@@ -177,6 +179,7 @@
               <span class="item-price">355 ₽</span>
               <span class="item-measure">/кг</span>
             </p>
+            <a class="button catalog-button dropdown" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hit-catalog-item">
             <a href="#">
@@ -187,6 +190,7 @@
               <span class="item-price">415 ₽</span>
               <span class="item-measure">/кг</span>
             </p>
+            <a class="button catalog-button dropdown" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -238,7 +242,30 @@
           <a class="button button-communication" href="#">Форма обратной связи</a>
         </div>
       </section>
-      <section class="modal modal-feedback">
+    </main>
+    <footer class="main-footer">
+      <ul class="footer-social">
+        <li><a href="#"><span class="visually-hidden">Твитер</span></a></li>
+        <li><a href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+        <li><a href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+        <li><a href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+      </ul>
+      <nav class="footer-navigation">
+        <ul class="footer-navigation-list">
+          <li><a href="for-suppliers.html">Для поставщиков</a></li>
+          <li><a href="documents.html">Наши документы</a></li>
+          <li><a href="production.html">О производстве</a></li>
+          <li><a href="ecological-standards.html">Экологические стандарты</a></li>
+        </ul>
+      </nav>
+      <div class="footer-copyright">
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="Логотип сайта HTML Academy">
+        </a>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2017</p>
+      </div>
+    </footer>
+    <section class="modal modal-feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <b>Мы обязательно вам ответим!</b>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
@@ -257,28 +284,5 @@
           <button class="button feedback-form-button" type="submit">Отправить</button>
         </form>
       </section>
-    </main>
-    <footer class="main-footer">
-      <ul class="footer-social">
-        <li><a href="#">Твитер</a></li>
-        <li><a href="#">Инстаграм</a></li>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Вконтакте</a></li>
-      </ul>
-      <nav class="footer-navigation">
-        <ul class="footer-navigation-list">
-          <li><a href="for-suppliers.html">Для поставщиков</a></li>
-          <li><a href="documents.html">Наши документы</a></li>
-          <li><a href="production.html">О производстве</a></li>
-          <li><a href="ecological-standards.html">Экологические стандарты</a></li>
-        </ul>
-      </nav>
-      <div class="footer-copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/svg/logo-htmlacademy.svg" width="108" height="39" alt="Логотип сайта HTML Academy">
-        </a>
-        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2017</p>
-      </div>
-    </footer>
   </body>
 </html>
