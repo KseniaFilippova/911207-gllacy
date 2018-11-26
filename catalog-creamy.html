@@ -113,21 +113,21 @@
       <section class="catalog-form">
         <h2 class="visually-hidden">Выбор мороженого по параметрам</h2>
         <form action="https://echo.htmlacademy.ru" method="get">
-          <div class="catalog-form-sort">
-            <p>Сортировка:</p>
+          <fieldset class="catalog-form-sort">
+            <legend>Сортировка:</legend>
             <select name="sort" id="form-sort">
               <option value="popular">по популярности</option>
               <option value="cheap-first">сначала недорогие</option>
               <option value="expensive-first">сначала дорогие</option>
               <option value="fat">по жирности</option>
             </select>
-          </div>
-          <div class="catalog-form-price">
-            <p>Цена: 100руб. - 500 руб.</p>
+          </fieldset>
+          <fieldset class="catalog-form-price">
+            <legend>Цена: 100руб. - 500 руб.</legend>
             <input type="range" min="100" max="500" step="1">
-          </div>
-          <div class="catalog-form-fat">
-            <p>Жирность:</p>
+          </fieldset>
+          <fieldset class="catalog-form-fat">
+            <legend>Жирность:</legend>
             <input id="0" type="radio" name="fat" value="0%">
             <label for="0">0 %</label>
             <input id="up-to-10" type="radio" name="fat" value="up-to-10%">
@@ -136,9 +136,9 @@
             <label for="up-to-30">до 30 %</label>
             <input id="above-30" type="radio" name="fat" value="above-30%">
             <label for="above-30">выше 30 %</label>
-          </div>
-          <div class="catalog-form-fillers">
-            <p>Наполнители:</p>
+          </fieldset>
+          <fieldset class="catalog-form-fillers">
+            <legend>Наполнители:</legend>
             <input id="chocolate" type="checkbox" name="fillers" value="chocolate">
             <label for="chocolate">шоколадные</label>
             <input id="sugar" type="checkbox" name="fillers" value="sugar">
@@ -149,10 +149,10 @@
             <label for="syrup">сиропы</label>
             <input id="jam" type="checkbox" name="fillers" value="jam">
             <label for="jam">джемы</label>
-          </div>
-          <div class="catalog-form-button">
+          </fieldset>
+          <fieldset class="catalog-form-button">
             <button type="submit">Применить</button>
-          </div>
+          </fieldset>
         </form>
       </section>
       <section class="catalog">
