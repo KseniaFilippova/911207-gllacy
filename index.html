@@ -2,6 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Магазин мороженого «Глэйси»</title>
   </head>
   <body>
@@ -122,11 +125,17 @@
           <img src="img/main-ice-creams3.png" alt="Пломбир с помадкой и клубничный щербет" width="647" height="584">
           <a class="button button-slider" href="#">Давайте оба!</a>
         </div>
-        <div class="slider-switch">
-          <input type="radio" name="ice-creams" value="ice-cream1" id="radio-ice-cream1" checked>
-          <input type="radio" name="ice-creams" value="ice-cream2" id="radio-ice-cream2">
-          <input type="radio" name="ice-creams" value="ice-cream3" id="radio-ice-cream3">
-        </div>
+        <ul class="slider-switch">
+          <li class="slider-radio">
+            <button class="slider-button">Первый слайд</button>
+          </li>
+          <li class="slider-radio">
+            <button class="slider-button">Второй слайд</button>
+          </li>
+          <li class="slider-radio">
+            <button class="slider-button">Третий слайд</button>
+          </li>
+        </ul>
       </section>
       <section class="promo">
         <h2 class="visually-hidden">Акции</h2>
@@ -213,7 +222,7 @@
           </li>
         </ul>
       </section>
-      <article class="ice-cream-article">
+      <article class="ice-cream-serve">
         <a href="#">
           <h2>10 способов сервировки фруктовых щербетов к столу</h2>
         </a>
