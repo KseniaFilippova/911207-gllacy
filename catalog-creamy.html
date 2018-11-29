@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Онлайн-магазин мороженого «Глэйси»</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
   </head>
   <body>
     <header class="main-header">
@@ -14,7 +14,7 @@
           <img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина «Глэйси»">
         </a>
         <ul class="site-navigation">
-          <li class="site-navigation-current">Каталог
+          <li><a href="catalog.html">Каталог</a>
             <ul class="catalog-navigation dropdown">
               <li ><a href="#">Новинки</a></li>
               <li class="dropdown-navigation-current">Сливочное</li>
@@ -153,7 +153,7 @@
             <input id="jam" type="checkbox" name="fillers" value="jam">
             <label for="jam">джемы</label>
           </fieldset>
-            <a class="catalog-form-button" href="#">Применить</a>
+          <button type="submit" class="catalog-form-button">Применить</button>
         </form>
       </section>
       <section class="catalog">
