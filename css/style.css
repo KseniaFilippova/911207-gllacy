@@ -111,6 +111,7 @@ a {
 
 .breadcrumbs a:hover, .breadcrumbs a:focus, .breadcrumbs a:active {
   color: #ffbc9e;
+  box-shadow: 0 1px 0 0 rgba(255,188,158,0.3);
 }
 
 .header-contacts {
@@ -127,8 +128,9 @@ a {
   color: #ffffff;
 }
 
-.header-contacts a:hover {
+.header-contacts a:hover, .header-contacts a:focus, .header-contacts a:active {
   color: #ffbc9e;
+  box-shadow: 0 1px 0 0 rgba(255,188,158,0.3);
 }
 
 .features {
@@ -189,8 +191,9 @@ a {
 }
 
 .subscribe input {
+  font: inherit;
   line-height: 24px;
-  color: 999999;
+  color: #999999;
 
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 5px;
@@ -206,13 +209,22 @@ h1.page-title {
   list-style: none;
 }
 
-.catalog-item a {
+.catalog-item {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
+}
+
+.catalog-item .name-link {
   color: #ffffff;
 
   box-shadow: 0 1px 0 0 rgba(255,255,255,0.3);
+}
+
+.catalog-item .name-link:hover, .catalog-item .name-link:focus, .catalog-item .name-link:active {
+  color: #ffbc9e;
+
+  box-shadow: 0 1px 0 0 rgba(255,188,158,0.3);
 }
 
 .catalog-item img {
@@ -244,10 +256,14 @@ h1.page-title {
 
 .footer-navigation-list a {
   color: #ffffff;
+
+  box-shadow: 0 1px 0 0 rgba(255,255,255,0.3);
 }
 
 .footer-navigation-list a:hover, .footer-navigation-list a:focus, .footer-navigation-list a:active {
   color: #ffbc9e;
+
+  box-shadow: 0 1px 0 0 rgba(255,188,158,0.3);
 }
 
 .footer-copyright {
@@ -260,6 +276,12 @@ h1.page-title {
   color: #ffffff;
 }
 
-.footer-copyright a:hover, .footer-copyright a:focus, .footer-copyright a:active {
+a.copyright-link {
+  box-shadow: 0 1px 0 0 rgba(255,255,255,0.3);
+}
+
+a.copyright-link:hover, a.copyright-link:focus, a.copyright-link:active {
   color: #ffbc9e;
+
+  box-shadow: 0 1px 0 0 rgba(255,188,158,0.3);
 }
