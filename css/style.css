@@ -8,18 +8,29 @@ body {
   background-color: #92a89c;
 }
 
-.dropdown, .modal {
-  display: none;
-}
-
 a {
   text-decoration: none;
 }
 
+.dropdown, .modal {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
-  width: 1150px;
+  width: 1146px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 27px;
 }
 
 .button {
@@ -68,6 +79,7 @@ a {
 .site-navigation {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 
   margin: 0;
   padding: 0;
@@ -144,11 +156,10 @@ a {
 
 .breadcrumbs {
   display: flex;
-  justify-content: space-between;
 
   margin: 0;
   padding: 0;
-  width: 220px;
+  width: 800px;
 
   font-size: 14px;
   line-height: 16px;
@@ -156,6 +167,10 @@ a {
 
   list-style: none;
   color: #ffffff;
+}
+
+.breadcrumbs li {
+  margin-right: 21px;
 }
 
 .breadcrumbs a {
@@ -208,6 +223,9 @@ a {
 }
 
 .features h2 {
+  margin: 0;
+  padding: 0;
+
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
@@ -259,13 +277,17 @@ a {
 }
 
 .subscribe {
-  width: 560px;
+  width: 550px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
   color: #323232;
 
   background-color: #f8f7f4;
+  border: 5px solid;
+  border-image-source: url("../img/subscribe-border.png");
+  border-image-slice: 4;
+  border-radius: 15px;
 }
 
 .subscribe input {
@@ -275,6 +297,11 @@ a {
 
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 5px;
+}
+
+.contacts-map {
+  position: relative;
+  left: -27px;
 }
 
 .page-title {
@@ -288,17 +315,15 @@ a {
 }
 
 .catalog {
-  margin-bottom: 80px;
+  margin-bottom: 43px;
 }
 
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
 
   margin: 0;
   padding: 0;
-  min-height: 1048px;
 
   list-style: none;
 }
@@ -307,6 +332,7 @@ a {
   display: flex;
   flex-direction: column;
 
+  margin-bottom: 40px;
   width: 267px;
   margin-right: 26px;
 }
@@ -325,11 +351,6 @@ a {
   text-align: center;
 }
 
-.catalog-item-picture {
-  order: -1;
-  margin-bottom: 7px;
-}
-
 .catalog-item-name a {
   color: #ffffff;
 
@@ -340,6 +361,11 @@ a {
   color: #ffbc9e;
 
   box-shadow: 0 1px 0 0 rgba(255,188,158,0.3);
+}
+
+.catalog-item-picture {
+  order: -1;
+  margin-bottom: 7px;
 }
 
 .catalog-item img {
