@@ -15,7 +15,7 @@
         </a>
         <ul class="site-navigation">
           <li class="catalog-dropdown site-navigation-item"><a href="catalog.html">Каталог</a>
-            <ul class="catalog-navigation dropdown">
+            <ul class="catalog-navigation">
               <li class="catalog-navigation-item catalog-navigation-item-new"><a href="#">Новинки</a></li>
               <li class="catalog-navigation-item"><a href="catalog-creamy.html">Сливочное</a></li>
               <li class="catalog-navigation-item"><a href="#">Щербеты</a></li>
@@ -63,7 +63,7 @@
         <p>С 10 до 20, ежедневно</p>
         <a href="tel:88124502525">8 812 450-25-25</a>
       </div>
-      <section class="modal modal-search">
+      <section class="dropdown dropdown-search">
         <h2 class="visually-hidden"><label for="searchfield">Поиск по сайту</label></h2>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <input id="searchfield" type="search" name="search" placeholder="Что ищем?">
@@ -105,13 +105,13 @@
                 </button>
               </td>
               <td class="cart-item-name item1">
-                <textarea name="item1" rows="2" readonly>Пломбир с апельсиновым джемом</textarea>
+                <textarea name="item1" rows="2" disabled>Пломбир с апельсиновым джемом</textarea>
               </td>
               <td class="cart-item-count">
-                <input type="text" name="item-count1" value="1,5 кг х 200 руб." readonly>
+                <input type="text" name="item-count1" value="1,5 кг х 200 руб." disabled>
               </td>
               <td class="cart-item-total">
-                <input type="text" name="item-total1" value="300 руб." readonly>
+                <input type="text" name="item-total1" value="300 руб." disabled>
               </td>
             </tr>
             <tr class="cart-item">
@@ -122,19 +122,19 @@
                   </svg>
                 </button>
               <td class="cart-item-name item2">
-                <textarea name="item2" rows="2" readonly>Клубничный пломбир с присыпкой из белого шоколада</textarea>
+                <textarea name="item2" rows="2" disabled>Клубничный пломбир с присыпкой из белого шоколада</textarea>
               </td>
               <td class="cart-item-count">
-                <input type="text" name="item-count2" value="1,5 кг х 300 руб." readonly>
+                <input type="text" name="item-count2" value="1,5 кг х 300 руб." disabled>
               </td>
               <td class="cart-item-total">
-                <input type="text" name="item-total2" value="450 руб." readonly>
+                <input type="text" name="item-total2" value="450 руб." disabled>
               </td>
             </tr>
           </table>
             <p class="cart-form-total">
               <label>Итого:
-                <input type="text" name="total-price" value="750 руб." readonly>
+                <input type="text" name="total-price" value="750 руб." disabled>
               </label>
               <a class="button cart-form-button" href="#">Оформить заказ</a>
               <button class="visually-hidden" type="button">Закрыть</button>
@@ -346,28 +346,30 @@
         <p>Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy </a>© 2017</p>
       </div>
     </footer>
-    <section class="modal modal-feedback">
-        <h2 class="visually-hidden">Форма обратной связи</h2>
-        <b>Мы обязательно вам ответим!</b>
-        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="feedback-form-name">
-            <label class="visually-hidden" for="user-name">Ваше имя</label>
-            <input type="text" name="user-name" id="user-name" placeholder="Как вас зовут?">
-          </p>
-          <p class="feedback-form-email">
-            <label class="visually-hidden" for="user-email">Ваш адрес электронной почты</label>
-            <input type="email" name="feedback-user-email" id="user-email" placeholder="Ваша почта для ответа?">
-          </p>
-          <p class="feedback-form-feedback">
-            <label class="visually-hidden" for="user-feedback">Ваш вопрос или отзыв</label>
-            <textarea name="user-feedback" id="user-feedback" placeholder="Напишите что-нибудь..." cols="30" rows="5"></textarea>
-          </p>
-            <button class="button feedback-form-button" type="submit">Отправить</button>
-        </form>
-        <button class="feedback-form-close" type="button">
-          <span class="visually-hidden">Закрыть</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
-        </button>
-      </section>
+    <div class="modal-overlay">
+      <section class="modal modal-feedback">
+          <h2 class="visually-hidden">Форма обратной связи</h2>
+          <b>Мы обязательно вам ответим!</b>
+          <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="feedback-form-name">
+              <label class="visually-hidden" for="user-name">Ваше имя</label>
+              <input type="text" name="user-name" id="user-name" placeholder="Как вас зовут?">
+            </p>
+            <p class="feedback-form-email">
+              <label class="visually-hidden" for="user-email">Ваш адрес электронной почты</label>
+              <input type="email" name="feedback-user-email" id="user-email" placeholder="Ваша почта для ответа?">
+            </p>
+            <p class="feedback-form-feedback">
+              <label class="visually-hidden" for="user-feedback">Ваш вопрос или отзыв</label>
+              <textarea name="user-feedback" id="user-feedback" placeholder="Напишите что-нибудь..." cols="30" rows="5"></textarea>
+            </p>
+              <button class="button feedback-form-button" type="submit">Отправить</button>
+          </form>
+          <button class="feedback-form-close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
+          </button>
+        </section>
+    </div>
   </body>
 </html>
