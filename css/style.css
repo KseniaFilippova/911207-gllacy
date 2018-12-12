@@ -322,7 +322,7 @@ img:not(.contacts-map) {
 .user-navigation-link:hover,
 .user-navigation-link:focus,
 .user-navigation-link:active,
-a.cart-filled {
+.cart-filled > a {
   background-color: #f8f7f4;
   border-radius: 45px;
 }
@@ -476,7 +476,7 @@ a.cart-filled {
   color: #323232;
 }
 
-.cart-filled {
+.cart-filled > a{
   color: #323232;
 }
 
@@ -631,7 +631,7 @@ a.cart-filled {
   padding: 10px 15px;
 }
 
-.user-navigation-cart:hover .dropdown-cart {
+.cart-filled:hover .dropdown-cart {
   display: block;
 }
 
