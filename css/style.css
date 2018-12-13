@@ -41,6 +41,7 @@ img:not(.contacts-map) {
 
 .button {
   display: inline-block;
+  vertical-align: middle;
 
   font: inherit;
   font-size: 18px;
@@ -115,7 +116,7 @@ img:not(.contacts-map) {
 .modal textarea:hover,
 .subscribe input:hover {
   border: 2px solid rgba(154, 154, 154, 0.52);
-  padding: 9px 14px;
+  padding: 9px 12px;
 }
 
 .dropdown:not(.dropdown-cart) input:focus,
@@ -123,7 +124,7 @@ img:not(.contacts-map) {
 .modal textarea:focus,
 .subscribe input:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
-  padding: 9px 14px;
+  padding: 9px 12px;
   outline: none;
 }
 
@@ -1337,6 +1338,7 @@ a.copyright-link:active {
 
 .modal-overlay {
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 0;
@@ -1346,6 +1348,7 @@ a.copyright-link:active {
 
 .modal {
   position: fixed;
+  z-index: 3;
 
   box-shadow: none;
 }
