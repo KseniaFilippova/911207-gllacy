@@ -17,7 +17,9 @@ img:not(.contacts-map) {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden,
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -96,6 +98,11 @@ img:not(.contacts-map) {
 }
 
 .dropdown input,
+.modal input {
+  min-height: 44px;
+}
+
+.dropdown input,
 .modal input,
 .modal textarea {
   padding: 10px 13px;
@@ -128,12 +135,37 @@ img:not(.contacts-map) {
   outline: none;
 }
 
+.dropdown input::-webkit-input-placeholder,
+.modal input::-webkit-input-placeholder,
+.modal textarea::-webkit-input-placeholder,
+.subscribe input::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+  opacity: 1;
+}
+.dropdown input:-ms-input-placeholder,
+.modal input:-ms-input-placeholder,
+.modal textarea:-ms-input-placeholder,
+.subscribe input:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+  opacity: 1;
+}
+.dropdown input::-ms-input-placeholder,
+.modal input::-ms-input-placeholder,
+.modal textarea::-ms-input-placeholder,
+.subscribe input::-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+  opacity: 1;
+}
 .dropdown input::placeholder,
 .modal input::placeholder,
 .modal textarea::placeholder,
 .subscribe input::placeholder {
   font-weight: 400;
   color: #999999;
+  opacity: 1;
 }
 
 .main-navigation {
@@ -889,7 +921,7 @@ img:not(.contacts-map) {
 }
 
 .subscribe input {
-  padding: 10px 15px;
+  padding: 10px 13px;
   width: 368px;
   box-sizing: border-box;
 
@@ -967,6 +999,10 @@ img:not(.contacts-map) {
   appearance: none;
 }
 
+.catalog-form-select::-ms-expand {
+display: none;
+}
+
 .catalog-form-select option {
   color: #323232;
 }
@@ -977,8 +1013,8 @@ img:not(.contacts-map) {
 
 .catalog-form-sort svg {
   position: absolute;
-  top: 34px;
   left: 168px;
+  bottom: 11px;
 
   width: 11px;
   height: 10px;
@@ -1185,6 +1221,7 @@ img:not(.contacts-map) {
   bottom: -60px;
   align-self: center;
   padding: 10px 17px;
+  left: 32px;
 }
 
 .catalog-item:hover .catalog-button,
