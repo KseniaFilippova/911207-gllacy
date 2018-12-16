@@ -143,6 +143,7 @@ input[type="radio"].visually-hidden {
   color: #999999;
   opacity: 1;
 }
+
 .dropdown input:-ms-input-placeholder,
 .modal input:-ms-input-placeholder,
 .modal textarea:-ms-input-placeholder,
@@ -151,6 +152,7 @@ input[type="radio"].visually-hidden {
   color: #999999;
   opacity: 1;
 }
+
 .dropdown input::-ms-input-placeholder,
 .modal input::-ms-input-placeholder,
 .modal textarea::-ms-input-placeholder,
@@ -159,6 +161,7 @@ input[type="radio"].visually-hidden {
   color: #999999;
   opacity: 1;
 }
+
 .dropdown input::placeholder,
 .modal input::placeholder,
 .modal textarea::placeholder,
@@ -509,7 +512,7 @@ input[type="radio"].visually-hidden {
   color: #323232;
 }
 
-.cart-filled > a{
+.cart-filled > a {
   color: #323232;
 }
 
@@ -945,7 +948,24 @@ input[type="radio"].visually-hidden {
 
 .contacts-map {
   position: relative;
+  width: 1200px;
+  height: 430px;
   left: -27px;
+}
+
+.contacts-map img  {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-contacts iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  border: 0;
 }
 
 .page-title {
@@ -1084,7 +1104,6 @@ display: none;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 45px;
-
 }
 
 .catalog-form-fat label {
@@ -1373,16 +1392,6 @@ a.copyright-link:active {
   box-shadow: 0 1px 0 0 rgba(255,188,158,0.3);
 }
 
-.modal-overlay {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
 .modal {
   position: fixed;
   z-index: 3;
@@ -1393,11 +1402,73 @@ a.copyright-link:active {
 .modal-feedback {
   display: none;
   width: 478px;
-  top: 337px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: calc(50vh - 221px);
+  left: calc(50vw - 239px);
 
   border-radius: 10px;
+}
+
+@keyframes modal-open {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.modal-feedback-show {
+  display: block;
+  animation: modal-open 0.5s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@keyframes overlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-overlay-show {
+  display: block;
+  animation: overlay 0.5s;
 }
 
 .feedback-form-close {
