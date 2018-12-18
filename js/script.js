@@ -72,12 +72,10 @@ var slide3 = document.querySelector(".slide-3");
 var body = document.querySelector("body");
 
 button1.addEventListener("click", function(evt) {
-  if (slide2.classList.contains("visually-hidden")) {
-  } else {
+  if (!slide2.classList.contains("visually-hidden")) {
     slide2.classList.add("visually-hidden");
   }
-  if (slide3.classList.contains("visually-hidden")) {
-  } else {
+  if (!slide3.classList.contains("visually-hidden")) {
     slide3.classList.add("visually-hidden");
   }
 
@@ -99,12 +97,10 @@ button1.addEventListener("click", function(evt) {
 });
 
 button2.addEventListener("click", function(evt) {
-  if (slide1.classList.contains("visually-hidden")) {
-  } else {
+  if (!slide1.classList.contains("visually-hidden")) {
     slide1.classList.add("visually-hidden");
   }
-  if (slide3.classList.contains("visually-hidden")) {
-  } else {
+  if (!slide3.classList.contains("visually-hidden")) {
     slide3.classList.add("visually-hidden");
   }
 
@@ -126,12 +122,10 @@ button2.addEventListener("click", function(evt) {
 });
 
 button3.addEventListener("click", function(evt) {
-  if (slide1.classList.contains("visually-hidden")) {
-  } else {
+  if (!slide1.classList.contains("visually-hidden")) {
     slide1.classList.add("visually-hidden");
   }
-  if (slide2.classList.contains("visually-hidden")) {
-  } else {
+  if (!slide2.classList.contains("visually-hidden")) {
     slide2.classList.add("visually-hidden");
   }
 
