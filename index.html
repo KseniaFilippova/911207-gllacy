@@ -148,48 +148,60 @@
       <h1 class="visually-hidden">Магазин мороженого «Глэйси»</h1>
       <section class="slider">
         <h2 class="visually-hidden">2 вида мороженого</h2>
-        <div class="slider-1">
+        <div class="slide slide-1">
           <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-          <img src="img/main-ice-creams1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="647" height="584">
+          <img src="img/main-ice-creams1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="880">
           <a class="button slider-button" href="#">Давайте оба!</a>
         </div>
-        <div class="slider-2">
+        <div class="slide slide-2 visually-hidden">
           <h3>Шоколадный пломбир и лимонный сорбет </h3>
-          <img src="img/main-ice-creams2.png" alt="Шоколадный пломбир и лимонный сорбет" width="647" height="584">
+          <img src="img/main-ice-creams2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1045" height="880">
           <a class="button slider-button" href="#">Давайте оба!</a>
         </div>
-        <div class="slider-3">
+        <div class="slide slide-3 visually-hidden">
           <h3>Пломбир с помадкой и клубничный щербет</h3>
-          <img src="img/main-ice-creams3.png" alt="Пломбир с помадкой и клубничный щербет" width="647" height="584">
+          <img src="img/main-ice-creams3.png" alt="Пломбир с помадкой и клубничный щербет" width="1045" height="880">
           <a class="button slider-button" href="#">Давайте оба!</a>
         </div>
         <ul class="slider-switch">
-          <li class="slider-radio">
-            <button class="slider-switch-button" type="button">Первый слайд</button>
+          <li>
+            <button class="slider-switch-button switch-button-1 switch-button-current" type="button">
+              <span class="visually-hidden">Первый слайд</span>
+            </button>
           </li>
-          <li class="slider-radio">
-            <button class="slider-switch-button" type="button">Второй слайд</button>
+          <li>
+            <button class="slider-switch-button switch-button-2" type="button">
+              <span class="visually-hidden">Второй слайд</span>
+            </button>
           </li>
-          <li class="slider-radio">
-            <button class="slider-switch-button" type="button">Третий слайд</button>
+          <li>
+            <button class="slider-switch-button switch-button-3" type="button">
+              <span class="visually-hidden">Третий слайд</span>
+            </button>
           </li>
         </ul>
       </section>
       <section class="promo">
         <h2 class="visually-hidden">Акции</h2>
-        <div class="promo-raspberry">
-          <h3>Малинка даром!</h3>
-          <p>
-            При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
-          </p>
-          <a class="button promo-button" href="#">Хочу варенье!</a>
-        </div>
-        <div class="promo-chocolate">
-          <h3>Шоколадки даром!</h3>
-          <p>
-            При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
-          </p>
-          <a class="button promo-button" href="#">Хочу шоколадки!</a>
+        <div class="columns">
+          <div class="promo-item promo-raspberry">
+            <h3>Малинка даром!</h3>
+            <p>
+              При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+            </p>
+            <div class="promo-button-container">
+              <a class="button promo-button" href="#">Хочу варенье!</a>
+            </div>
+          </div>
+          <div class="promo-item promo-chocolate">
+            <h3>Шоколадки даром!</h3>
+            <p>
+              При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+            </p>
+            <div class="promo-button-container">
+              <a class="button promo-button" href="#">Хочу шоколадки!</a>
+            </div>
+          </div>
         </div>
       </section>
       <section class="hit-catalog">
@@ -299,15 +311,15 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts-map">
           <img src="img/map.jpg" alt="Карта с указанием адреса магазина" width="1200" height="430">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.2507367637495!2d30.3210852!3d59.9383584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1544945546313" width="1200" height="430"frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="contacts-communication">
-          <p>Адрес главного офиса и офлайн-магазина:</p>
-          <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-          <p>Для заказов по телефону:</p>
-          <a href="tel:88124502525"><b>8 812 450-25-25</b></a>
-          <p>(с 10 до 20 ежедневно)</p>
-          <a class="button communication-button" href="#">Форма обратной связи</a>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.2507367637495!2d30.3210852!3d59.9383584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1544945546313" width="1200" height="430" allowfullscreen></iframe>
+          <div class="contacts-communication">
+            <p class="contacts-line1">Адрес главного офиса и офлайн-магазина:</p>
+            <b class="contacts-line2">ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+            <p class="contacts-line3">Для заказов по телефону:</p>
+            <a class="contacts-tel" href="tel:88124502525"><b>8 812 450-25-25</b></a>
+            <p class="contacts-line5">(с 10 до 20 ежедневно)</p>
+            <a class="button communication-button" href="#">Форма обратной связи</a>
+          </div>
         </div>
       </section>
     </main>

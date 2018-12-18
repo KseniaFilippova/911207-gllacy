@@ -60,3 +60,94 @@ modalForm.addEventListener("submit", function(evt) {
     localStorage.setItem("mail", modalMail.value);
   }
 });
+
+var button1 = document.querySelector(".switch-button-1");
+var button2 = document.querySelector(".switch-button-2");
+var button3 = document.querySelector(".switch-button-3");
+
+var slide1 = document.querySelector(".slide-1");
+var slide2 = document.querySelector(".slide-2");
+var slide3 = document.querySelector(".slide-3");
+
+var body = document.querySelector("body");
+
+button1.addEventListener("click", function(evt) {
+  if (slide2.classList.contains("visually-hidden")) {
+  } else {
+    slide2.classList.add("visually-hidden");
+  }
+  if (slide3.classList.contains("visually-hidden")) {
+  } else {
+    slide3.classList.add("visually-hidden");
+  }
+
+  slide1.classList.remove("visually-hidden");
+
+  if (button2.classList.contains("switch-button-current")) {
+    button2.classList.remove("switch-button-current");
+  } else if (button3.classList.contains("switch-button-current")) {
+    button3.classList.remove("switch-button-current");
+  }
+
+  button1.classList.add("switch-button-current");
+
+  if (body.classList.contains("background-blue")) {
+    body.classList.remove("background-blue");
+  } else if (body.classList.contains("background-brown")) {
+    body.classList.remove("background-brown");
+  }
+});
+
+button2.addEventListener("click", function(evt) {
+  if (slide1.classList.contains("visually-hidden")) {
+  } else {
+    slide1.classList.add("visually-hidden");
+  }
+  if (slide3.classList.contains("visually-hidden")) {
+  } else {
+    slide3.classList.add("visually-hidden");
+  }
+
+  slide2.classList.remove("visually-hidden");
+
+  if (button1.classList.contains("switch-button-current")) {
+    button1.classList.remove("switch-button-current");
+  } else if (button3.classList.contains("switch-button-current")) {
+    button3.classList.remove("switch-button-current");
+  }
+
+  button2.classList.add("switch-button-current");
+
+  if (body.classList.contains("background-brown")) {
+    body.classList.remove("background-brown");
+  }
+
+  body.classList.add("background-blue");
+});
+
+button3.addEventListener("click", function(evt) {
+  if (slide1.classList.contains("visually-hidden")) {
+  } else {
+    slide1.classList.add("visually-hidden");
+  }
+  if (slide2.classList.contains("visually-hidden")) {
+  } else {
+    slide2.classList.add("visually-hidden");
+  }
+
+  slide3.classList.remove("visually-hidden");
+
+  if (button1.classList.contains("switch-button-current")) {
+    button1.classList.remove("switch-button-current");
+  } else if (button2.classList.contains("switch-button-current")) {
+    button2.classList.remove("switch-button-current");
+  }
+
+  button3.classList.add("switch-button-current");
+
+  if (body.classList.contains("background-blue")) {
+    body.classList.remove("background-blue");
+  }
+
+  body.classList.add("background-brown");
+});

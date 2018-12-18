@@ -152,7 +152,7 @@
         </div>
       </div>
     </header>
-    <main class="container">
+    <main class="container catalog-main">
       <h1 class="page-title">Сливочное мороженое</h1>
       <section class="catalog-form">
         <h2 class="visually-hidden">Выбор мороженого по параметрам</h2>
@@ -182,30 +182,93 @@
           <fieldset class="catalog-form-fat">
             <legend>Жирность:</legend>
             <div class="form-fat-container">
-              <input class="visually-hidden" id="0" type="radio" name="fat" value="0%">
-              <label for="0">0%</label>
-              <input class="visually-hidden" id="up-to-10" type="radio" name="fat" value="up-to-10%">
-              <label for="up-to-10">до 10%</label>
-              <input class="visually-hidden" id="up-to-30" type="radio" name="fat" value="up-to-30%">
-              <label for="up-to-30">до 30%</label>
-              <input class="visually-hidden" id="above-30" type="radio" name="fat" value="above-30%">
-              <label for="above-30">выше 30%</label>
+              <input class="form-fat-input visually-hidden" id="0" type="radio" name="fat" value="0%">
+              <label for="0">
+                <svg class="catalog-form-radio" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 25 25">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/>
+                  <circle fill="none" cx="12.5" cy="12.5" r="4.5"/>
+                </svg>0%
+              </label>
+              <input class="form-fat-input visually-hidden" id="up-to-10" type="radio" name="fat" value="up-to-10%" checked>
+              <label for="up-to-10">
+                <svg class="catalog-form-radio" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 25 25">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/>
+                  <circle fill="none" cx="12.5" cy="12.5" r="4.5"/>
+                </svg>до 10%
+              </label>
+              <input class="form-fat-input visually-hidden" id="up-to-30" type="radio" name="fat" value="up-to-30%">
+              <label for="up-to-30">
+               <svg class="catalog-form-radio" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 25 25">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/>
+                  <circle fill="none" cx="12.5" cy="12.5" r="4.5"/>
+                </svg>до 30%
+              </label>
+              <input class="form-fat-input visually-hidden" id="above-30" type="radio" name="fat" value="above-30%">
+              <label for="above-30">
+                <svg class="catalog-form-radio" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 25 25">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/>
+                  <circle fill="none" cx="12.5" cy="12.5" r="4.5"/>
+                </svg>выше 30%</label>
             </div>
           </fieldset>
           <fieldset class="catalog-form-fillers">
             <legend>Наполнители:</legend>
-            <input id="chocolate" type="checkbox" name="fillers" value="chocolate">
-            <label for="chocolate">шоколадные</label>
-            <input id="sugar" type="checkbox" name="fillers" value="sugar">
-            <label for="sugar">сахарные присыпки</label>
-            <input id="fruit" type="checkbox" name="fillers" value="fruit">
-            <label for="fruit">фрукты</label>
-            <input id="syrup" type="checkbox" name="fillers" value="syrup">
-            <label for="syrup">сиропы</label>
-            <input id="jam" type="checkbox" name="fillers" value="jam">
-            <label for="jam">джемы</label>
+            <div class="form-fillers-container">
+              <input class="form-fillers-input visually-hidden" id="chocolate" type="checkbox" name="fillers" value="chocolate" checked>
+              <label for="chocolate">
+                <svg class="checkbox-off" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                </svg>
+                <svg class="checkbox-on" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 27 23">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                </svg>шоколадные
+              </label>
+              <input class="form-fillers-input visually-hidden" id="sugar" type="checkbox" name="fillers" value="sugar" checked>
+              <label for="sugar">
+                <svg class="checkbox-off" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                </svg>
+                <svg class="checkbox-on" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 27 23">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                </svg>сахарные присыпки
+              </label>
+              <input class="form-fillers-input visually-hidden" id="fruit" type="checkbox" name="fillers" value="fruit">
+              <label for="fruit">
+                <svg class="checkbox-off" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                </svg>
+                <svg class="checkbox-on" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 27 23">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                </svg>фрукты
+              </label>
+              <input class="form-fillers-input visually-hidden" id="syrup" type="checkbox" name="fillers" value="syrup">
+              <label for="syrup">
+                <svg class="checkbox-off" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                </svg>
+                <svg class="checkbox-on" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 27 23">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                </svg>сиропы
+              </label>
+              <input class="form-fillers-input visually-hidden" id="jam" type="checkbox" name="fillers" value="jam">
+              <label for="jam">
+                <svg class="checkbox-off" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                </svg>
+                <svg class="checkbox-on" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 27 23">
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/>
+                  <path fill="rgba(255, 255, 255, 0.8)" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                </svg>джемы
+              </label>
+            </div>
           </fieldset>
-          <button type="submit" class="catalog-form-button">Применить</button>
+          <div class="form-button-container">
+            <button type="submit" class="catalog-form-button">Применить</button>
+          </div>
         </form>
       </section>
       <section class="catalog">
@@ -394,10 +457,11 @@
         </ul>
       </section>
       <ul class="pagination-list">
-        <li class="pagination-item pagination-item-current"><a>1</a></li>
-        <li class="pagination-item"><a href="#">2</a></li>
-        <li class="pagination-item"><a href="#">3</a></li>
-        <li class="pagination-item"><a href="#">4</a></li>
+        <li class="pagination-item-current"><a class="pagination-item">1</a></li>
+        <li><a class="pagination-item" href="#">2</a></li>
+        <li><a class="pagination-item" href="#">3</a></li>
+        <li><a class="pagination-item" href="#">4</a></li>
+        <li><a class="pagination-item" href="#">5</a></li>
       </ul>
     </main>
     <footer class="main-footer container">
@@ -438,7 +502,7 @@
         <p>Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy </a>© 2017</p>
       </div>
     </footer>
-    <link type="text/script" href="js/script.js">
+    <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>
 
