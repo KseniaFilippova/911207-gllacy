@@ -1,7 +1,9 @@
 var modalFeedback = document.querySelector(".modal-feedback");
 var modalOverlay = document.querySelector(".modal-overlay");
 var modalForm = document.querySelector(".feedback-form");
-var modalLogin = modalFeedback.querySelector("[name=user-name]");
+
+if (modalFeedback) {
+  var modalLogin = modalFeedback.querySelector("[name=user-name]");
 var modalMail = modalFeedback.querySelector("[name=feedback-user-email]");
 var modalText = modalFeedback.querySelector("[name=user-feedback]");
 var modalClose = document.querySelector(".feedback-form-close");
@@ -60,8 +62,12 @@ modalForm.addEventListener("submit", function(evt) {
     localStorage.setItem("mail", modalMail.value);
   }
 });
+}
 
-var button1 = document.querySelector(".button-1");
+var slider = document.querySelector(".slider");
+
+if (slider) {
+  var button1 = document.querySelector(".button-1");
 var button2 = document.querySelector(".button-2");
 var button3 = document.querySelector(".button-3");
 
@@ -157,3 +163,5 @@ button3.addEventListener("click", function(evt) {
     body.classList.add("background-brown");
   }
 });
+}
+
