@@ -4,7 +4,9 @@ body {
   line-height: 1.4em;
   font-weight: 400;
   color: #ffffff;
+}
 
+.background-green {
   background-color: #92a89c;
 }
 
@@ -71,15 +73,11 @@ img {
 .button:focus {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
   box-shadow: 0px 2px 2px 0 #ac1000;
-
-  outline: none;
 }
 
 .button:active {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
   box-shadow: inset 0px 2px 2px 0 #942718;
-
-  outline: none;
 }
 
 .dropdown,
@@ -749,6 +747,10 @@ img {
   align-items: center;
 }
 
+.slide-hidden {
+  display: none;
+}
+
 .slide h3 {
   margin: 0;
   margin-top: 274px;
@@ -769,7 +771,7 @@ img {
   z-index: -1;
 }
 
-.slider-button {
+.slide-button {
   margin-top: 30px;
   padding: 10px 42px;
 
@@ -778,7 +780,7 @@ img {
   font-weight: 700;
 }
 
-.slider-switch {
+.slider-buttons {
   display: flex;
   position: absolute;
   top: 430px;
@@ -787,13 +789,13 @@ img {
   list-style: none;
 }
 
-.slider-switch li {
+.slider-buttons li {
   margin: 0;
   padding: 0;
   padding-right: 7px;
 }
 
-.slider-switch-button {
+.slider-button {
   width: 21px;
   height: 21px;
 
@@ -804,23 +806,14 @@ img {
   cursor: pointer;
 }
 
-.slider-switch-button:not(.switch-button-current):hover,
-.slider-switch-button:not(.switch-button-current):focus {
+.slider-button:not(.current-button):hover,
+.slider-button:not(.current-button):focus {
   background-color: rgba(255, 255, 255, 0.4);
-
-  outline: none;
 }
 
-.slider-switch-button:not(.switch-button-current):active {
+.slider-button:not(.current-button):active,
+.current-button {
   background-color: #ffffff;
-
-  outline: none;
-}
-
-.switch-button-current {
-  background-color: #ffffff;
-
-  outline: none;
 }
 
 .promo-item {
@@ -1178,11 +1171,11 @@ img {
   padding: 10px 27px;
 }
 
-.catalog-main {
+.catalog-creamy-main {
   position: relative;
 }
 
-.catalog-main::after {
+.catalog-creamy-main::after {
   position: absolute;
   bottom: -30px;
   left: 27px;
@@ -1226,7 +1219,7 @@ img {
 
 .catalog-form legend {
   margin-left: 16px;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 
   font-size: 14px;
   line-height: 16px;
@@ -1339,8 +1332,8 @@ display: none;
 }
 
 .catalog-form-fat svg {
-  padding-left: 14px;
-  padding-right: 10px;
+  margin-left: 14px;
+  margin-right: 10px;
 
   line-height: 37px;
   vertical-align: middle;
@@ -1348,19 +1341,30 @@ display: none;
   cursor: pointer;
 }
 
-.form-fat-input:checked + label circle {
+.form-fat-input + label circle {
+  fill: none;
+}
+
+.form-fat-input:checked + label circle,
+.form-fat-input + label svg {
   fill: rgba(255, 255, 255, 0.8);
 }
 
-.catalog-form-radio:hover path,
-.catalog-form-radio:focus path,
-.form-fat-input:checked + label svg:hover circle,
-.form-fat-input:checked + label svg:focus circle {
+.form-fat-input + label:hover svg,
+.form-fat-input + label:focus svg,
+.form-fat-input:checked + label:hover circle,
+.form-fat-input:checked + label:focus circle {
   fill: rgb(255, 255, 255);
 }
 
-.form-fat-input.disabled + label path,
-.form-fat-input.disabled:checked + label svg circle {
+.form-fat-input:focus + label svg {
+  outline: 1px solid #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.form-fat-input.disabled + label svg,
+.form-fat-input.disabled:checked + label circle {
   fill: rgba(255, 255, 255, 0.4);
 }
 
@@ -1378,7 +1382,7 @@ display: none;
 
 .checkbox-off {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 16px;
 
   cursor: pointer;
@@ -1401,15 +1405,19 @@ display: none;
   display: block;
 }
 
-.checkbox-off:hover path,
-.checkbox-off:focus path,
-.checkbox-on:hover path,
-.checkbox-on:focus path {
+.form-fillers-input + label:hover path,
+.form-fillers-input + label:focus path {
   fill: rgb(255, 255, 255);
 }
 
 .form-fillers-input.disabled + label path {
   fill: rgba(255, 255, 255, 0.4);
+}
+
+.form-fillers-input:focus + label svg {
+  outline: 1px solid #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .catalog-form-button {
@@ -1435,7 +1443,6 @@ display: none;
   color: #323232;
 
   background-color: #ffffff;
-  outline: none;
 }
 
 .catalog-form-button:active {
@@ -1446,11 +1453,10 @@ display: none;
   border: none;
   box-shadow: inset 0px 2px 1px 0 #696969;
   background-color: #ededed;
-  outline: none;
 }
 
 .catalog {
-  margin-bottom: 43px;
+  margin-bottom: 46px;
 }
 
 .catalog-list {
