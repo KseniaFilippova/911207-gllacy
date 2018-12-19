@@ -738,7 +738,7 @@ img {
 
 .slider {
   position: relative;
-  height: 530px;
+  min-height: 530px;
 }
 
 .slide {
@@ -1805,7 +1805,7 @@ a.copyright-link:active {
 
 .modal {
   position: fixed;
-  z-index: 3;
+  z-index: 11;
 
   box-shadow: none;
 }
@@ -1860,7 +1860,7 @@ a.copyright-link:active {
 .modal-overlay {
   display: none;
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
