@@ -61,9 +61,9 @@ modalForm.addEventListener("submit", function(evt) {
   }
 });
 
-var button1 = document.querySelector(".switch-button-1");
-var button2 = document.querySelector(".switch-button-2");
-var button3 = document.querySelector(".switch-button-3");
+var button1 = document.querySelector(".button-1");
+var button2 = document.querySelector(".button-2");
+var button3 = document.querySelector(".button-3");
 
 var slide1 = document.querySelector(".slide-1");
 var slide2 = document.querySelector(".slide-2");
@@ -72,76 +72,88 @@ var slide3 = document.querySelector(".slide-3");
 var body = document.querySelector("body");
 
 button1.addEventListener("click", function(evt) {
-  if (!slide2.classList.contains("visually-hidden")) {
-    slide2.classList.add("visually-hidden");
+  if (!slide2.classList.contains("slide-hidden")) {
+    slide2.classList.add("slide-hidden");
+  } else if (!slide3.classList.contains("slide-hidden")) {
+    slide3.classList.add("slide-hidden");
   }
-  if (!slide3.classList.contains("visually-hidden")) {
-    slide3.classList.add("visually-hidden");
-  }
-
-  slide1.classList.remove("visually-hidden");
-
-  if (button2.classList.contains("switch-button-current")) {
-    button2.classList.remove("switch-button-current");
-  } else if (button3.classList.contains("switch-button-current")) {
-    button3.classList.remove("switch-button-current");
+  if (slide1.classList.contains("slide-hidden")) {
+    slide1.classList.remove("slide-hidden");
   }
 
-  button1.classList.add("switch-button-current");
+  if (button2.classList.contains("current-button")) {
+    button2.classList.remove("current-button");
+  } else if (button3.classList.contains("current-button")) {
+    button3.classList.remove("current-button");
+  }
+  if (!button1.classList.contains("current-button")) {
+    button1.classList.add("current-button");
+  }
 
   if (body.classList.contains("background-blue")) {
     body.classList.remove("background-blue");
   } else if (body.classList.contains("background-brown")) {
     body.classList.remove("background-brown");
   }
+  if (!body.classList.contains("background-green")) {
+    body.classList.add("background-green");
+  }
 });
 
 button2.addEventListener("click", function(evt) {
-  if (!slide1.classList.contains("visually-hidden")) {
-    slide1.classList.add("visually-hidden");
+  if (!slide1.classList.contains("slide-hidden")) {
+    slide1.classList.add("slide-hidden");
+  } else if (!slide3.classList.contains("slide-hidden")) {
+    slide3.classList.add("slide-hidden");
   }
-  if (!slide3.classList.contains("visually-hidden")) {
-    slide3.classList.add("visually-hidden");
-  }
-
-  slide2.classList.remove("visually-hidden");
-
-  if (button1.classList.contains("switch-button-current")) {
-    button1.classList.remove("switch-button-current");
-  } else if (button3.classList.contains("switch-button-current")) {
-    button3.classList.remove("switch-button-current");
+  if (slide2.classList.contains("slide-hidden")) {
+    slide2.classList.remove("slide-hidden");
   }
 
-  button2.classList.add("switch-button-current");
+  if (button1.classList.contains("current-button")) {
+    button1.classList.remove("current-button");
+  } else if (button3.classList.contains("current-button")) {
+    button3.classList.remove("current-button");
+  }
+  if (!button2.classList.contains("current-button")) {
+    button2.classList.add("current-button");
+  }
 
-  if (body.classList.contains("background-brown")) {
+  if (body.classList.contains("background-green")) {
+    body.classList.remove("background-green");
+  } else if (body.classList.contains("background-brown")) {
     body.classList.remove("background-brown");
   }
-
-  body.classList.add("background-blue");
+  if (!body.classList.contains("background-blue")) {
+    body.classList.add("background-blue");
+  }
 });
 
 button3.addEventListener("click", function(evt) {
-  if (!slide1.classList.contains("visually-hidden")) {
-    slide1.classList.add("visually-hidden");
+  if (!slide1.classList.contains("slide-hidden")) {
+    slide1.classList.add("slide-hidden");
+  } else if (!slide2.classList.contains("slide-hidden")) {
+    slide2.classList.add("slide-hidden");
   }
-  if (!slide2.classList.contains("visually-hidden")) {
-    slide2.classList.add("visually-hidden");
-  }
-
-  slide3.classList.remove("visually-hidden");
-
-  if (button1.classList.contains("switch-button-current")) {
-    button1.classList.remove("switch-button-current");
-  } else if (button2.classList.contains("switch-button-current")) {
-    button2.classList.remove("switch-button-current");
+  if (slide3.classList.contains("slide-hidden")) {
+    slide3.classList.remove("slide-hidden");
   }
 
-  button3.classList.add("switch-button-current");
+  if (button1.classList.contains("current-button")) {
+    button1.classList.remove("current-button");
+  } else if (button2.classList.contains("current-button")) {
+    button2.classList.remove("current-button");
+  }
+  if (!button3.classList.contains("current-button")) {
+    button3.classList.add("current-button");
+  }
 
-  if (body.classList.contains("background-blue")) {
+  if (body.classList.contains("background-green")) {
+    body.classList.remove("background-green");
+  } else if (body.classList.contains("background-blue")) {
     body.classList.remove("background-blue");
   }
-
-  body.classList.add("background-brown");
+  if (!body.classList.contains("background-brown")) {
+    body.classList.add("background-brown");
+  }
 });
