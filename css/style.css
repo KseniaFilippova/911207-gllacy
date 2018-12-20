@@ -38,7 +38,9 @@ img {
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -1310,7 +1312,8 @@ display: none;
 }
 
 .range-slider:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   cursor: pointer;
 }
 
@@ -1573,7 +1576,8 @@ display: none;
   display: none;
   position: absolute;
   bottom: -60px;
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   padding: 10px 17px;
   left: 32px;
 }
@@ -1819,42 +1823,83 @@ a.copyright-link:active {
   border-radius: 10px;
 }
 
-@keyframes modal-open {
+@-webkit-keyframes modal-open {
   from {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   to {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes modal-open {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 .modal-feedback-show {
   display: block;
-  animation: modal-open 0.5s;
+  -webkit-animation: modal-open 0.5s;
+          animation: modal-open 0.5s;
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   10%,
   30%,
   50%,
   70%,
   90% {
-    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
   }
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
   }
 }
 
 .modal-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .modal-overlay {
@@ -1868,6 +1913,15 @@ a.copyright-link:active {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+@-webkit-keyframes overlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes overlay {
   from {
     opacity: 0;
@@ -1879,7 +1933,8 @@ a.copyright-link:active {
 
 .modal-overlay-show {
   display: block;
-  animation: overlay 0.5s;
+  -webkit-animation: overlay 0.5s;
+          animation: overlay 0.5s;
 }
 
 .feedback-form-close {
