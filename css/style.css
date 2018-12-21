@@ -10,6 +10,10 @@ body {
   background-color: #92a89c;
 }
 
+.background-green-catalog {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent 656px);
+}
+
 .background-blue {
   background-color: #8996a6;
 }
@@ -824,6 +828,8 @@ img {
   box-sizing: border-box;
 
   border-radius: 15px;
+  background-size: cover;
+  background-position: center;
 }
 
 .promo-item h3 {
@@ -1000,6 +1006,8 @@ img {
   background-color: #ffffff;
   background-image: url("../img/background-article.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 15px;
 }
 
@@ -1459,7 +1467,7 @@ display: none;
 }
 
 .catalog {
-  margin-bottom: 46px;
+  margin-bottom: 39px;
 }
 
 .catalog-list {
@@ -1477,7 +1485,7 @@ display: none;
   flex-direction: column;
   position: relative;
 
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   width: 267px;
   margin-right: 26px;
 }
@@ -1545,7 +1553,7 @@ display: none;
   position: absolute;
   content: "";
   width: 293px;
-  height: 405px;
+  height: calc(100% + 81px);
   top: -6px;
   left: -13px;
 
@@ -1678,6 +1686,7 @@ display: none;
   flex-wrap: wrap;
 
   margin: 0;
+  margin-top: 10px;
   margin-left: 3px;
   padding: 0;
   width: 300px;
@@ -1690,6 +1699,7 @@ display: none;
   width: 32px;
   height: 32px;
   margin-right: 17px;
+  margin-bottom: 10px;
 
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
   border-radius: 50%;
@@ -1737,12 +1747,6 @@ display: none;
   padding-bottom: 3px;
 }
 
-.footer-navigation-list li:first-child {
-  margin-right: 32px;
-
-  font-weight: 700;
-}
-
 .love-suppliers {
   position: relative;
 }
@@ -1758,8 +1762,14 @@ display: none;
   background-repeat: no-repeat;
 }
 
-.footer-navigation-list li:nth-child(3) {
+.footer-navigation-list li:nth-child(2n - 1) {
   margin-right: 44px;
+}
+
+.footer-navigation-list li:first-child {
+  margin-right: 32px;
+
+  font-weight: 700;
 }
 
 .footer-navigation-list a {
@@ -1779,7 +1789,6 @@ display: none;
 .footer-copyright {
   width: 190px;
   padding-bottom: 10px;
-  padding-left: -6px;
 
   font-size: 12px;
   line-height: 18px;
